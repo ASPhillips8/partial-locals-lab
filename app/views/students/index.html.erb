@@ -2,8 +2,8 @@
 
 <h2>Search For Student</h2>
 
-<%= form_tag students_path do %>
-  <% text_field_tag :search, params[:search] %>
+<%= form_tag students_path, method: :get do %>
+  <%= text_field_tag :search, params[:search] %>
   <% submit_tag("Search")%>
 <% end %>
 
